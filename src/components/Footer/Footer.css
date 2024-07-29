@@ -1,0 +1,77 @@
+#footer {
+  margin-top: 50px;
+  background: #254e58;
+  padding: 40px 0;
+  height: 350px;
+  color: #112D32;
+  box-shadow: 1px 3px 2px -3px rgba(20, 1, 39, 0.6) inset;
+}
+
+footer#footer .container > div {
+  float: left;
+  padding: 0 40px;
+}
+
+footer#footer .abt {
+  width: 33%;
+}
+
+footer#footer .mnu {
+  width: 29%;
+}
+
+footer#footer .cmp, footer#footer .os {
+  width: 19%;
+}
+
+footer#footer .desc, footer#footer .desc a {
+  color: #a5a5a5;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.iiwp-language-switcher {
+  background: #343434;
+  display: inline-block;
+  margin: 20px 0;
+  position: relative;
+  width: auto;
+  z-index: 10;
+}
+
+.iiwp-language-switcher .current-lang, .iiwp-language-switcher a {
+  color: #a5a5a5;
+  display: block;
+  padding: 15px 40px 15px 50px;
+  position: relative;
+  text-decoration: none;
+}
+
+.mnu > ul > li > a, .mnu > ul > li > span {
+  color: #a5a5a5;
+  cursor: pointer;
+  display: block;
+  padding: 12px 15px;
+  position: relative;
+}
+
+.mnu > ul > li > ul {
+  display: none;
+  list-style-type: none;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 100;
+}
+
+.mnu > ul > li > ul a {
+  color: #a5a5a5;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+footer#footer .desc a {
+  display: block;
+  margin: 0 0 14px;
+  text-decoration: none;
+}
