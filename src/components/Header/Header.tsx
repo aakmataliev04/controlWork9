@@ -18,7 +18,7 @@ const Header: React.FC = () => {
           </li>
           <li className={'nav-item'}>
             <NavLink
-              to="/add-transaction"
+              to="add-transaction"
               className={'nav-link'}
             >
               Add

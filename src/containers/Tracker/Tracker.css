@@ -1,53 +1,19 @@
 
-.calories-total {
+.tracker-total {
   margin: 10px 0;
   display: flex;
 }
-.calories-total-title {
+.tracker-total-title {
   font-weight: 500;
 }
 
-.calories-btn {
+.transactions-list {
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  appearance: none;
-  background-color: #88BDBC;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: #112D32 0 2px 4px, #254e58 0 7px 13px -3px, #254e58 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395A;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
-  height: 48px;
   justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s, transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
-  font-size: 18px;
-}
-
-.calories-btn:focus {
-  box-shadow: #112D32 0 0 0 1.5px inset, #254e58 0 2px 4px, #254e58 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-
-.calories-btn:hover {
-  box-shadow: #254e58 0 0 0 1.5px inset, #254e58 0 2px 4px, #254e58 0 7px 13px -3px, #254e58 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-
-.calories-btn:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
+  gap: 20px;
+  width: 65%;
 }

@@ -16,9 +16,11 @@ const CategoryItem: React.FC<Props> = ({category}) => {
 
   const onDelete = async (contactId: string) => {
     try {
-      setIsDeleting(true);
-      await dispatch(deleteCategory(contactId));
-      await dispatch(fetchCategories());
+      if (confirm()) {
+        setIsDeleting(true);
+        await dispatch(deleteCategory(contactId));
+        await dispatch(fetchCategories());
+      }
     } finally {
       toast.success('Category deleted!');
       setIsDeleting(false);
