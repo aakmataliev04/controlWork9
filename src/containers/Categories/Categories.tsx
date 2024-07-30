@@ -18,17 +18,17 @@ const Categories: React.FC = () => {
 
   const categoriesList = (
     <div className={'categories-list'}>
-    {
-      categories !== null ? (
-        categories.map((category, index: number) => {
-          return (
-            <CategoryItem key={category.name+index} category={category}/>
-          );
-        })
-      ) : (
-        <div style={{display: 'flex', justifyContent: 'center', padding: '30vh 0'}}><Preloader/></div>
-      )
-    }
+      {
+        categories !== null ? (
+          categories.map((category, index: number) => {
+            return (
+              <CategoryItem key={category.name + index} category={category}/>
+            );
+          })
+        ) : (
+          <div style={{display: 'flex', justifyContent: 'center', padding: '30vh 0'}}><Preloader/></div>
+        )
+      }
     </div>
   );
 
@@ -42,9 +42,9 @@ const Categories: React.FC = () => {
               Add Category
             </Link>
           </div>
-        {categoriesList}
+          {categoriesList}
         </>
-      ) : <Outlet />}
+      ) : <Outlet/>}
     </div>
   );
 };

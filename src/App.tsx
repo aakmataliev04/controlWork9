@@ -10,7 +10,6 @@ import AddTransaction from './containers/AddTransaction/AddTransaction';
 import EditTransaction from './containers/EditTransaction/EditTransaction';
 
 
-
 const App: React.FC = () => {
   return (
     <Layout>

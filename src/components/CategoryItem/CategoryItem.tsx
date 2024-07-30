@@ -10,6 +10,7 @@ import {deleteCategory, fetchCategories} from '../../store/categoriesThunks';
 interface Props {
   category: Category;
 }
+
 const CategoryItem: React.FC<Props> = ({category}) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const dispatch = useAppDispatch();
@@ -33,9 +34,11 @@ const CategoryItem: React.FC<Props> = ({category}) => {
         <h4 className={'category-title'}>{category.name}</h4>
       </div>
       <div className={'category-control'}>
-        <div className={'category-type'} style={category.type === 'income'? {color: "green"}: {color: "red"}}>{category.type}</div>
+        <div className={'category-type'}
+             style={category.type === 'income' ? {color: 'green'} : {color: 'red'}}>{category.type}</div>
         <Link className="category-btn" to={`edit/${category.id}`}>Edit</Link>
-        <button onClick={() => onDelete(category.id)} className="category-btn category-delete-btn" disabled={isDeleting}>
+        <button onClick={() => onDelete(category.id)} className="category-btn category-delete-btn"
+                disabled={isDeleting}>
           {isDeleting && <div style={{margin: '0 5px'}}><ButtonSpinner/></div>}
           Delete
         </button>

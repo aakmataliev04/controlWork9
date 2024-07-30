@@ -30,7 +30,7 @@ const TransactionItem: React.FC<Props> = ({transaction, category}) => {
   };
   return (
     <div className="transaction">
-      <div className="category-name" style={{display: 'flex', alignItems: 'center'}}>
+      <div className="transaction-name" style={{display: 'flex', alignItems: 'center'}}>
         <div className={'transaction-type'}>{dayjs(transaction.date).format('DD.MM.YYYY HH:mm:ss')}</div>
         <h4 className={'transaction-title'}>{category.name}</h4>
       </div>

@@ -18,7 +18,8 @@ export interface TransactionsState {
   isDeleting: boolean;
   isError: boolean;
 }
-const initialState : TransactionsState = {
+
+const initialState: TransactionsState = {
   transactionMutation: {
     type: '',
     transaction: {

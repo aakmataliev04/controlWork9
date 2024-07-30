@@ -42,11 +42,11 @@ const Tracker: React.FC = () => {
           transactions.map((transaction) => {
             return (
               categories?.map((category) => {
-               if (category.id === transaction.idCategory) {
-                 return (
-                   <TransactionItem key={transaction.id} transaction={transaction} category={category}/>
-                 );
-               }
+                if (category.id === transaction.idCategory) {
+                  return (
+                    <TransactionItem key={transaction.id} transaction={transaction} category={category}/>
+                  );
+                }
               })
             );
           })
@@ -60,14 +60,14 @@ const Tracker: React.FC = () => {
     <>
       {
         location === '/' ? (
-        <div>
-          <div className="tracker-total">
-            <h2 className={'tracker-total-title'}>Total: <strong>{getTotal()}</strong> KGS</h2>
+          <div>
+            <div className="tracker-total">
+              <h2 className={'tracker-total-title'}>Total: <strong>{getTotal()}</strong> KGS</h2>
+            </div>
+            {transactionsList}
           </div>
-          {transactionsList}
-        </div>
-      ) : (
-        <Outlet />
+        ) : (
+          <Outlet/>
         )
       }
     </>

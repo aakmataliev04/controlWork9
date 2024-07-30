@@ -1,4 +1,3 @@
-
 import {AsyncThunk, createAsyncThunk} from '@reduxjs/toolkit';
 import {ApiCategories, ApiCategory, Category} from '../types';
 import {AppDispatch} from '../app/store';
@@ -31,10 +30,12 @@ export const createCategory: AsyncThunk<void, ApiCategory, { dispatch: AppDispat
     }
   );
 
-export const fetchOneCategory: AsyncThunk<ApiCategory, string, { dispatch: AppDispatch }> = createAsyncThunk<ApiCategory, string>(
+export const fetchOneCategory: AsyncThunk<ApiCategory, string, {
+  dispatch: AppDispatch
+}> = createAsyncThunk<ApiCategory, string>(
   'category/fetchOneCategory',
   async (id) => {
-    const { data: category } = await axiosApi.get<ApiCategory | null>(
+    const {data: category} = await axiosApi.get<ApiCategory | null>(
       `/financeTracker/categories/${id}.json`,
     );
     if (category === null) {
@@ -44,7 +45,9 @@ export const fetchOneCategory: AsyncThunk<ApiCategory, string, { dispatch: AppDi
   },
 );
 
-export const updateCategory: AsyncThunk<void, { id: string; category: ApiCategory }, { dispatch: AppDispatch }> = createAsyncThunk<void, {id: string, category: ApiCategory}>(
+export const updateCategory: AsyncThunk<void, { id: string; category: ApiCategory }, {
+  dispatch: AppDispatch
+}> = createAsyncThunk<void, { id: string, category: ApiCategory }>(
   'category/updateCategory',
   async ({id, category}) => {
     await axiosApi.put(`/financeTracker/categories/${id}.json`, category);
@@ -54,6 +57,6 @@ export const updateCategory: AsyncThunk<void, { id: string; category: ApiCategor
 export const deleteCategory: AsyncThunk<void, string, { dispatch: AppDispatch }> = createAsyncThunk<void, string>(
   'category/deleteCategory',
   async (categoryId) => {
-      await axiosApi.delete(`/financeTracker/categories/${categoryId}.json`);
+    await axiosApi.delete(`/financeTracker/categories/${categoryId}.json`);
   },
 );

@@ -10,10 +10,12 @@ export interface ApiTransaction {
   amount: number,
   date: string,
 }
+
 export interface transactionMutation {
   type: string,
   transaction: ApiTransaction,
 }
+
 export interface ApiTransactions {
   [id: string]: ApiTransaction;
 }
@@ -28,6 +30,7 @@ export interface ApiCategory {
   type: 'income' | 'expense',
   name: string,
 }
+
 export interface ApiCategories {
   [id: string]: ApiCategory;
 }
